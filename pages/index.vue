@@ -1,15 +1,16 @@
 <template>
   <div>
-    Hello, World!
+    🔐 {{ authToken }}
   </div>
 </template>
 
 <script>
 
 export default {
-  components: {}
+  computed: {
+    authToken () {
+      return this.$store.state.authToken;
+    }
+  }
 }
 </script>
-
-<style>
-</style>
